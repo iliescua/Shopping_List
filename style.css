@@ -16,7 +16,26 @@ h1 {
     font-size: 3em;
     letter-spacing: -1px;
 }
+
 h1 span {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 5px;
+}
+
+.container {
+    text-align: center;
+    margin: 30px;
+    margin-top: 170px;
+    background-color: rgba(0, 80, 0, 0.6);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+h3 {
+    color: white;
+    text-decoration: underline;
+}
+
+button, input {
+    border-radius: 15px;
 }
