@@ -52,7 +52,7 @@ itemContainer.addEventListener("click", function(delClick){
 
 // Action to clear all entries in the list
 btn_clear.addEventListener("click", function() {
-    while(itemContainer.getElementsByClassName("itemContents").length > 0){
+    while (itemContainer.getElementsByClassName("itemContents").length > 0){
         itemContainer.removeChild(itemContainer.firstChild);
     }
 });
