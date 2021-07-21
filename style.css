@@ -25,7 +25,8 @@ h1 span {
 
 .container {
     text-align: center;
-    margin: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
     margin-top: 170px;
     background-color: rgba(0, 80, 0, 0.6);
     border: 1px solid black;
