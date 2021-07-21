@@ -2,7 +2,7 @@ var input = document.getElementById("userInput");
 var btn_add = document.getElementById("add_btn");
 var btn_clear = document.getElementById("clear_btn");
 var btn_remove = document.getElementById("removeLast_btn");
-var listStorage = document.getElementById("listStorage");
+var itemContainer = document.getElementById("itemContainer");
 
 // Basic function to check and add an item to the ul
 function addListItem() {
@@ -11,7 +11,7 @@ function addListItem() {
     paragraph.appendChild(document.createTextNode(input.value));
     btn_del.appendChild(document.createTextNode("X"));
     btn_del.id = "delete_btn";
-    listStorage.append(paragraph, btn_del);
+    itemContainer.append(paragraph, btn_del);
     input.value = "";
 }
 
@@ -29,10 +29,14 @@ input.addEventListener("keypress", function(event) {
     }
 });
 
+btn_del.addEventListener("click", function(){
+    
+});
+
 // Action to clear all entries in the list
 btn_clear.addEventListener("click", function() {
-    var element =  listStorage.getElementsByTagName("p");
-    while(listStorage.getElementsByTagName("p").length > 0) {
+    var element =  itemContainer.getElementsByTagName("p");
+    while(itemContainer.getElementsByTagName("p").length > 0) {
         listStorage.removeChild(element[0]);
     }
 });
