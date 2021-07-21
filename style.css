@@ -18,8 +18,9 @@ h1 {
 }
 
 h1 span {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
+    box-shadow: 10px 10px 10px black;
 }
 
 .container {
@@ -27,7 +28,7 @@ h1 span {
     margin: 30px;
     margin-top: 170px;
     background-color: rgba(0, 80, 0, 0.6);
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
@@ -38,4 +39,24 @@ h3 {
 
 button, input {
     border-radius: 15px;
+}
+
+ul {
+    list-style: inside;
+}
+
+li {
+    text-align: center;
+    color: white;
+}
+
+.reminder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: -20px;
+}
+
+#emoji {
+    margin-left: 5px;
 }
