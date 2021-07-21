@@ -41,11 +41,7 @@ button, input {
     border-radius: 15px;
 }
 
-ul {
-    list-style: inside;
-}
-
-li {
+p {
     text-align: center;
     color: white;
 }
@@ -54,9 +50,25 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
 
 #emoji {
     margin-left: 5px;
+}
+
+#listStorage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#delete_btn {
+    height: 25px;
+    width: 25px;
+    background-color: rgba(0, 255, 0, 0.4);
+    border: 1px solid grey;
+    margin-left: 10px;
+    color: #C70039;
 }

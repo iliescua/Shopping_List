@@ -2,13 +2,16 @@ var input = document.getElementById("userInput");
 var btn_add = document.getElementById("add_btn");
 var btn_clear = document.getElementById("clear_btn");
 var btn_remove = document.getElementById("removeLast_btn");
-var ul = document.querySelector("ul");
+var listStorage = document.getElementById("listStorage");
 
 // Basic function to check and add an item to the ul
 function addListItem() {
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value));
-    ul.appendChild(li);
+    var paragraph = document.createElement("p");
+    var btn_del = document.createElement("button");
+    paragraph.appendChild(document.createTextNode(input.value));
+    btn_del.appendChild(document.createTextNode("X"));
+    btn_del.id = "delete_btn";
+    listStorage.append(paragraph, btn_del);
     input.value = "";
 }
 
@@ -28,14 +31,8 @@ input.addEventListener("keypress", function(event) {
 
 // Action to clear all entries in the list
 btn_clear.addEventListener("click", function() {
-    var element =  ul.getElementsByTagName("li");
-    while(ul.getElementsByTagName("li").length > 0) {
-        ul.removeChild(element[0]);
+    var element =  listStorage.getElementsByTagName("p");
+    while(listStorage.getElementsByTagName("p").length > 0) {
+        listStorage.removeChild(element[0]);
     }
-});
-
-// Action to remove the last item in the list
-btn_remove.addEventListener("click", function() {
-    var element =  ul.getElementsByTagName("li");
-    ul.removeChild(element[ul.getElementsByTagName("li").length - 1]);
 });
