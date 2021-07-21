@@ -45,7 +45,7 @@ itemContainer.addEventListener("click", function(item){
 
 // Action to delete row once user decides it is no londer necessary
 itemContainer.addEventListener("click", function(delClick){
-    if(delClick.target.id === "delete_btn") {
+    if (delClick.target.id === "delete_btn") {
         delClick.target.parentElement.remove();
     }
 });
