@@ -39,6 +39,7 @@ h3 {
 }
 
 button, input {
+    margin-top: 10px;
     border-radius: 15px;
 }
 
@@ -75,4 +76,8 @@ p {
 
 .complete {
     text-decoration: line-through;
+}
+
+#clear_btn {
+    margin-bottom: 10px;
 }
