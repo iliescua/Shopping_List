@@ -5,7 +5,7 @@ const btn_remove = document.getElementById("removeLast_btn");
 const itemContainer = document.getElementById("itemContainer");
 
 // Basic function to check and add an item to the item container
-function addListItem() {
+const addListItem = () => {
     const itemContents = document.createElement("div");
     const paragraph = document.createElement("p");
     const btn_del = document.createElement("button");
