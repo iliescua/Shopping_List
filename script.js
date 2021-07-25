@@ -1,14 +1,14 @@
-var input = document.getElementById("userInput");
-var btn_add = document.getElementById("add_btn");
-var btn_clear = document.getElementById("clear_btn");
-var btn_remove = document.getElementById("removeLast_btn");
-var itemContainer = document.getElementById("itemContainer");
+const input = document.getElementById("userInput");
+const btn_add = document.getElementById("add_btn");
+const btn_clear = document.getElementById("clear_btn");
+const btn_remove = document.getElementById("removeLast_btn");
+const itemContainer = document.getElementById("itemContainer");
 
 // Basic function to check and add an item to the item container
 function addListItem() {
-    var itemContents = document.createElement("div");
-    var paragraph = document.createElement("p");
-    var btn_del = document.createElement("button");
+    const itemContents = document.createElement("div");
+    const paragraph = document.createElement("p");
+    const btn_del = document.createElement("button");
     // Add item contents div to the item container
     itemContents.classList.add("itemContents");
     itemContainer.appendChild(itemContents);
