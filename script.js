@@ -23,36 +23,43 @@ const addListItem = () => {
 }
 
 // Action for when the add button is clicked
-btn_add.addEventListener("click", function() {
+const addBtnAction = () => {
     if(input.value.length > 0) {
         addListItem();
     }
-});
+}
 
 // Action for enter is clicked instead of the add button
-input.addEventListener("keypress", function(event) {
+const addEnterAction = (event) => {
     if (input.value.length > 0 && event.key === "Enter"){
         addListItem();
     }
-});
+}
 
 // Action to strikethrough any selected item
-itemContainer.addEventListener("click", function(item){
+const updateText = (item) => {
     if (item.target.tagName === "P") {
         item.target.classList.toggle("complete");
     }
-});
+}
 
 // Action to delete row once user decides it is no londer necessary
-itemContainer.addEventListener("click", function(delClick){
+const delRow = (delClick) => {
     if (delClick.target.id === "delete_btn") {
         delClick.target.parentElement.remove();
     }
-});
+}
 
 // Action to clear all entries in the list
-btn_clear.addEventListener("click", function() {
+const clearAll = () => {
     while (itemContainer.getElementsByClassName("itemContents").length > 0){
         itemContainer.removeChild(itemContainer.firstChild);
     }
-});
+}
+
+// Added and set up all of the eventlisteners for any action we want the user to do
+btn_add.addEventListener("click", addBtnAction);
+input.addEventListener("keypress", addEnterAction);
+itemContainer.addEventListener("click", updateText);
+itemContainer.addEventListener("click", delRow);
+btn_clear.addEventListener("click", clearAll);
